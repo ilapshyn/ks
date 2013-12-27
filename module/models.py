@@ -3,16 +3,27 @@ from django.db import models
 
 
 DATE_PUBLISHED      = 'date published'
+STATIC              = '/static/'
+MODULE_STATIC       = 'module/static/'
 STATIC_IMAGES       = 'module/static/images/'
 STATIC_IMAGES_SMALL = 'module/static/images/small/'
 
 # Create your models here.
 class Divan(models.Model):
     name        = models.CharField(max_length=50)
+    type        = models.CharField(max_length=50)
     pub_date    = models.DateField(DATE_PUBLISHED)
     image       = models.ImageField(upload_to = STATIC_IMAGES)
+    
+    @property
+    def url(self):
+        return self.image.name.replace(MODULE_STATIC, STATIC)
+    
+    @property
+    def small_url(self):
+        return self.image.name.replace(STATIC_IMAGES, STATIC_IMAGES_SMALL).replace(MODULE_STATIC, STATIC)
 
-    def save(self, size=(40, 30)):
+    def save(self, size=(290, 190)):
         if not self.id and not self.image:
             return
         super(Divan, self).save()

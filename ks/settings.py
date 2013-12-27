@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/ilap/work/ks/sqlite.db',                      # Or path to database file if using sqlite3.
+        'NAME': '/home/ubuntu/work/ks/sqlite.db',                      # Or path to database file if using sqlite3.
         'USER': 'ks',                      # Not used with sqlite3.
         'PASSWORD': 'ks',                  # Not used with sqlite3.
         'HOST': 'ks',                      # Set to empty string for localhost. Not used with sqlite3.
