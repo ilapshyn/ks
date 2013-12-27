@@ -1,3 +1,260 @@
-.test {
-	color: red;
-}
+			.row{
+				margin-bottom: 5px;
+			}
+			
+			.cornered{
+				-moz-border-radius: 15px;
+				border-radius: 15px;
+			}
+			
+			.shadowed{
+				box-shadow: 0 0 40px black;
+			}
+			
+			.header-section{
+				height: 140px;
+				text-shadow: 3px 3px 4px black, 5px 5px 6px #ff7700;
+				color: #7c0d09;
+				font-family: Serif;
+				text-transform: uppercase;
+				background-image: linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -o-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -moz-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -webkit-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -ms-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+
+				background-image: -webkit-gradient(
+					linear,
+					left top,
+					left bottom,
+					color-stop(0.49, rgb(252,238,109)),
+					color-stop(0, rgb(240,240,183)),
+					color-stop(0.88, rgb(230,143,14))
+				);
+			}
+			
+			.header-section h1{
+				font-size: 350%;
+				margin-left: 250px;
+				margin-top: 30px;
+			}
+			
+			.header-section h2{
+				font-size: 270%;
+				color: #b11611;
+				margin-left: 290px;
+			}
+			
+			.header-section .logo{
+				margin-top: -160px;
+				margin-left: 650px;
+			}
+			
+			.header-section .logo-main{
+				margin-top: -140px;
+				margin-left: 20px;
+			}
+			
+			.search-section{
+				height: 50px;
+				background-image: linear-gradient(top, rgb(230,144,14) 0%, rgb(150,70,16) 51%, rgb(99,33,17) 100%);
+				background-image: -o-linear-gradient(top, rgb(230,144,14) 0%, rgb(150,70,16) 51%, rgb(99,33,17) 100%);
+				background-image: -moz-linear-gradient(top, rgb(230,144,14) 0%, rgb(150,70,16) 51%, rgb(99,33,17) 100%);
+				background-image: -webkit-linear-gradient(top, rgb(230,144,14) 0%, rgb(150,70,16) 51%, rgb(99,33,17) 100%);
+				background-image: -ms-linear-gradient(top, rgb(230,144,14) 0%, rgb(150,70,16) 51%, rgb(99,33,17) 100%);
+
+				background-image: -webkit-gradient(
+					linear,
+					left top,
+					left bottom,
+					color-stop(0, rgb(230,144,14)),
+					color-stop(0.51, rgb(150,70,16)),
+					color-stop(1, rgb(99,33,17))
+				);
+			}
+			
+			.menu-section{
+				height: 112px;
+			}
+			
+			a.menu-link{
+				color: white; font-weight: bold;
+			}
+			
+			.footer{
+				margin-top: 3px;
+				height: 60px;
+				text-shadow: 3px 3px 4px black, 5px 5px 6px #ff7700;
+				color: #7c0d09;
+				font-family: Serif;
+				text-transform: uppercase;
+				background-image: linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -o-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -moz-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -webkit-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+				background-image: -ms-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
+
+				background-image: -webkit-gradient(
+					linear,
+					left top,
+					left bottom,
+					color-stop(0.49, rgb(252,238,109)),
+					color-stop(0, rgb(240,240,183)),
+					color-stop(0.88, rgb(230,143,14))
+				);
+			}
+			
+			.footer div{
+				margin-top: 20px;
+				margin-left: 30px;
+			}
+			
+			
+			.search{
+				margin: -43px 0px 10px 690px;
+			}
+			
+			.home-button{
+				margin-left: 10px;
+				display: inline-block;
+				width:45px;
+				height:45px;
+				background-image: url(../img/home1.png);
+			}
+			
+			.home-button:hover{
+				background-image: url(../img/home2.png);
+				cursor: pointer;
+			}
+			
+			.material_link{
+				margin-left: 7px;
+				display: inline-block;
+				width: 235px;
+				height: 45px;
+				background-image: url(../img/material1.png);
+			}
+   
+			.material_link:hover{
+				background-image: url(../img/material2.png);
+				cursor: pointer;
+			}
+			
+			.oplata_link{
+				margin-left: 7px;
+				display: inline-block;
+				width: 160px;
+				height: 45px;
+				background-image: url(../img/oplata1.png);
+			}
+   
+			.oplata_link:hover{
+				background-image: url(../img/oplata2.png);
+				cursor: pointer;
+			}
+			
+			.kontakty_link{
+				margin-left: 7px;
+				margin-top: 3px;
+				display: inline-block;
+				width: 200px;
+				height: 45px;
+				background-image: url(../img/kontakt1.png);
+			}
+   
+			.kontakty_link:hover{
+				background-image: url(../img/kontakt2.png);
+				cursor: pointer;
+			}
+			
+			.content{
+				min-height: 500px;
+			}
+			
+			.menu-item{
+				height: 100px;
+				width: 100px; 
+				display:inline-block;
+				margin-top: 4px;
+			}
+			
+			.soft-mebel-button{
+				background-image: url(../img/1/11.png);
+			}
+			
+			.soft-mebel-button:hover{
+				background-image: url(../img/1/12.png);
+				cursor: pointer;
+			}
+			
+			.stoly-krisla-button{
+				background-image: url(../img/2/21.png);
+			}
+			
+			.stoly-krisla-button:hover{
+				background-image: url(../img/2/22.png);
+				cursor: pointer;
+			}
+			
+			.kyhni-button{
+				background-image: url(../img/3/31.png);
+			}
+			
+			.kyhni-button:hover{
+				background-image: url(../img/3/32.png);
+				cursor: pointer;
+			}
+			
+			.spalni-button{
+				background-image: url(../img/4/41.png);
+			}
+			
+			.spalni-button:hover{
+				background-image: url(../img/4/42.png);
+				cursor: pointer;
+			}
+			
+			.shafy-kupe-button{
+				background-image: url(../img/5/51.png);
+			}
+			
+			.shafy-kupe-button:hover{
+				background-image: url(../img/5/52.png);
+				cursor: pointer;
+			}
+			
+			.shaluzi-button{
+				background-image: url(../img/6/61.png);
+			}
+			
+			.shaluzi-button:hover{
+				background-image: url(../img/6/62.png);
+				cursor: pointer;
+			}
+			
+			.vorota-button{
+				background-image: url(../img/7/71.png);
+			}
+			
+			.vorota-button:hover{
+				background-image: url(../img/7/72.png);
+				cursor: pointer;
+			}
+			
+			.gotovi-mebli-button{
+				background-image: url(../img/8/81.png);
+			}
+			
+			.gotovi-mebli-button:hover{
+				background-image: url(../img/8/82.png);
+				cursor: pointer;
+			}
+			
+			.kartyny-button{
+				background-image: url(../img/9/91.png);
+			}
+			
+			.kartyny-button:hover{
+				background-image: url(../img/9/92.png);
+				cursor: pointer;
+			}
