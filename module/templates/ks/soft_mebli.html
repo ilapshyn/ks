@@ -1,99 +1,20 @@
-﻿<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Дивани від виробника - Канапа Стиль - Львів</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/static/css/bootstrap-image-gallery.css">
-        <link rel="stylesheet" href="/static/css/main.css">
-		<style>
-			.gallery-item{
-				display: inline-block;
-				margin: 10px;
-				cursor: pointer;
-			}
-			.gallery-item:hover{
-				box-shadow: 0 0 20px black;
-			}
-			
-		</style>
-
-
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="container">
-			<div class="row">
-				<div class="span12 header-section cornered shadowed">
-					<h1>Меблі </h1>
-					<h2>від виробника</h2>
-					<img class="logo-main" src="/static/img/logo-main.png">
-					<img class="logo"src="/static/img/logo.png">
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12 cornered search-section shadowed">
-					<div class="home-button"onClick="location='../'"></div>
-					<div class="material_link" onClick="location='material.html'"></div>
-					<div class="oplata_link" onClick="location='oplata.html'"></div>
-					<div class="kontakty_link" onClick="location='kontakty.html'"></div>
-					<form class="search" action="index.html">
-						<input type="text" class="search-query" placeholder="Пошук">
-					</form>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12 menu-section cornered" style="margin-left:24px;">
-					<div class="menu-item soft-mebel-button" style="background-image: url(/static/img/1/13.png)" onClick="location='soft-mebel'"></div>
-					<div class="menu-item stoly-krisla-button" onClick="location='stoly-krisla.html'"></div>
-					<div class="menu-item kyhni-button"  onClick="location='kyhni.html'"></div>
-					<div class="menu-item spalni-button" onClick="location='spalni.html'"></div>
-					<div class="menu-item shafy-kupe-button" onClick="location='shafy-kupe.html'"></div>
-					<div class="menu-item shaluzi-button" onClick="location='shaluzi.html'"></div>
-					<div class="menu-item vorota-button" onClick="location='vorota.html'"></div>
-					<div class="menu-item gotovi-mebli-button"  onClick="location='gotovi-mebli.html'"></div>
-					<div class="menu-item kartyny-button" onClick="location='kartyny.html'"></div>
-				</div>
-			</div>
-            <div class="row">
-                <div class="span12 content cornered shadowed">
-					<!-- modal-gallery is the modal dialog used for the image gallery -->
-					<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
-						<div class="modal-header">
-							<a class="close" data-dismiss="modal">&times;</a>
-							<h3 class="modal-title"></h3>
-						</div>
-						<div class="modal-body"><div class="modal-image"></div></div>
-						<div class="modal-footer">
-							<a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Попередній</a>
-							<a class="btn btn-primary modal-next">Наступний <i class="icon-arrow-right icon-white"></i></a>
-						</div>
-					</div>
-					<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="div.gallery-item">
-						{% for divan in divans %}
-							<div class="gallery-item" data-href="{{ divan.url }}" title="{{ divan.name }}"><img src="{{ divan.small_url }}" style="width: 290px;"></div>
-						{% endfor %}
-					</div>
-				</div>
-            </div>
-            <div class="row">
-				<div class="span12 footer cornered shadowed"><div>&copy; kanapa-style 2013<div></div>
-            </div>
-        </div> 
-
-        <script src="/static/js/vendor/jquery-1.8.3.min.js"></script>
-        <script src="/static/js/vendor/bootstrap.min.js"></script>
-		<script src="/static/js/vendor/load-image.js"></script>
-		<script src="/static/js/vendor/bootstrap-image-gallery.js"></script>
-        <script src="/static/js/main.js"></script>
-    </body>
-</html>
+﻿{% extends "ks/base.html" %}
+{% block content%}	
+	<!-- modal-gallery is the modal dialog used for the image gallery -->
+	<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">&times;</a>
+			<h3 class="modal-title"></h3>
+		</div>
+		<div class="modal-body"><div class="modal-image"></div></div>
+		<div class="modal-footer">
+			<a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Попередній</a>
+			<a class="btn btn-primary modal-next">Наступний <i class="icon-arrow-right icon-white"></i></a>
+		</div>
+	</div>
+	<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="div.gallery-item">
+		{% for divan in divans %}
+			<div class="gallery-item" data-href="{{ divan.url }}" title="{{ divan.name }}"><img src="{{ divan.small_url }}" style="width: 290px;"></div>
+		{% endfor %}
+	</div>
+{% endblock%}	
