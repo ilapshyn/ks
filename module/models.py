@@ -69,6 +69,13 @@ class Spalni(BaseDivan):
     type        = models.CharField(max_length=50, choices = [('1', 'Класичні спальні'),
                                                              ('2', 'Сучасні спальні'),
                                                              ('3', 'Готові спальні')])
+
     
+class Shaluzi(BaseDivan):
+    type=None
+    
+class Kartyny(BaseDivan):    
+    type=None
 
-
+class Vorota(BaseDivan):
+    type=None

@@ -1,5 +1,6 @@
 from django.shortcuts import render_to_response
-from models import SoftMebel, Citchen, Stolu, ShafyKupe
+from models import SoftMebel, Citchen, Stolu, ShafyKupe, Vorota, Kartyny,\
+    Shaluzi
 
 MENU =           ['soft-mebel', 
                   'kyhni', 
@@ -23,7 +24,9 @@ def soft_mebli(request):
                                                      'selected' : 'soft-mebel'})
 
 def vorota(request):
-    return render_to_response('ks/vorota.html',     {'menu' : MENU,
+    vorotas_list = Vorota.objects.all();
+    return render_to_response('ks/vorota.html',     {'items' : vorotas_list,
+                                                     'menu' : MENU,
                                                      'selected' : 'vorota'})
 
 def kyhni(request):
@@ -56,17 +59,24 @@ def stoly_krisla(request):
 def spalni(request):
     option_number = request.GET.get('option')
     spalni = Stolu.objects.filter(type=option_number)
-    return render_to_response('ks/spalni.html', {'items' : spalni,
+    return render_to_response('ks/spalni.html',       {'items' : spalni,
                                                        'option' : option_number,
                                                        'options': ['1','2','3'],
                                                        'menu' : MENU,
                                                        'selected' : 'spalni'})
 
 def shaluzi(request):
-    return render_to_response('ks/shaluzi.html',    {'menu' : MENU,
+    shaluzis = Shaluzi.objects.all();
+    return render_to_response('ks/shaluzi.html',    {'items' : shaluzis,
+                                                     'menu' : MENU,
                                                      'selected' : 'shaluzi'})
 
 def kartyny(request):
-    return render_to_response('ks/kartyny.html',    {'menu' : MENU,
+    kartynas = Kartyny.objects.all();
+    return render_to_response('ks/kartyny.html',    {'items' : kartynas,
+                                                     'menu' : MENU,
                                                      'selected' : 'kartyny'})
+def oplata(request):
+    return render_to_response('ks/404.html',        {'menu' : MENU,
+                                                     'selected' : 'oplata'})
 
