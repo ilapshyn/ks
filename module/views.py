@@ -14,10 +14,11 @@ def index(request):
     return render_to_response('ks/index.html',{'menu' : MENU})
 
 def soft_mebli(request):
-    divans_list = SoftMebel.objects.all();
     option_number = request.GET.get('option')
+    divans_list = SoftMebel.objects.filter(type=option_number)
     return render_to_response('ks/soft_mebli.html', {'divans' : divans_list,
                                                      'option' : option_number,
+                                                     'options': ['1','2','3','4','5','6'],
                                                      'menu' : MENU,
                                                      'selected' : 'soft-mebel'})
 
