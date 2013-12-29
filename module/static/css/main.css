@@ -61,47 +61,43 @@
 			}
 			
 			.header-section{
-				height: 140px;
-				text-shadow: 3px 3px 4px black, 5px 5px 6px #ff7700;
-				color: #7c0d09;
-				font-family: Serif;
-				text-transform: uppercase;
-				background-image: linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
-				background-image: -o-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
-				background-image: -moz-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
-				background-image: -webkit-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
-				background-image: -ms-linear-gradient(top, rgb(252,238,109) 49%, rgb(240,240,183) 0%, rgb(230,143,14) 88%);
-
-				background-image: -webkit-gradient(
-					linear,
-					left top,
-					left bottom,
-					color-stop(0.49, rgb(252,238,109)),
-					color-stop(0, rgb(240,240,183)),
-					color-stop(0.88, rgb(230,143,14))
-				);
+				height: 150px;
+				width: 950px;
+				margin-left: 15px;
+				background-image: url("../img/menu/top_menu.png");
 			}
 			
-			.header-section h1{
-				font-size: 350%;
-				margin-left: 250px;
-				margin-top: 30px;
+			.header-section .social{
+				width: 40px;
+				height: 120px;
+				position: relative;
+				display: inline-block;
+				top: 16px;
+				left: 880px;
+				line-height: 0px;
 			}
 			
-			.header-section h2{
-				font-size: 270%;
-				color: #b11611;
-				margin-left: 290px;
+			.header-section .social .social-icon{
+				width: 40px;
+				height: 40px;
+				display: inline-block;
+				background-image: url("../img/menu/all_social_icons_buttons.png");
 			}
 			
-			.header-section .logo{
-				margin-top: -160px;
-				margin-left: 650px;
+			.header-section .social .social-icon:hover{
+				background-position-y: -40px;
 			}
 			
-			.header-section .logo-main{
-				margin-top: -140px;
-				margin-left: 20px;
+			.header-section .social .vk{
+				background-position-x: 0px;
+			}
+			
+			.header-section .social .facebook{
+				background-position-x: -40px;
+			}
+			
+			.header-section .social .skype{
+				background-position-x: -80px;
 			}
 			
 			.content p {
