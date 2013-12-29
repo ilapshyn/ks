@@ -215,15 +215,21 @@
 			.content{
 				min-height: 500px;
 				background: #fff6a6;
+				padding-top:30px; 
+				padding-bottom:30px; 
+				font-family: Serif; 
+				color: #7c0d09; 
+				text-shadow: 1px 1px 1px #7c651d;
 			}
 			
 			.gallery-item{
 				display: inline-block;
 				margin: 10px;
 				cursor: pointer;
+				box-shadow: 0 0 30px;
 			}
 			.gallery-item:hover{
-				box-shadow: 0 0 20px black;
+				box-shadow: 0 0 30px black !important;
 			}
 			.menu-item{
 				background-image: url("../img/menu/menu_all_picture_buttons.png");

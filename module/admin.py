@@ -1,4 +1,4 @@
-from module.models import Divan
 from django.contrib import admin
+from models import SoftMebel
 
-admin.site.register(Divan)
+admin.site.register(SoftMebel)

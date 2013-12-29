@@ -3,23 +3,18 @@ from PIL import Image
 from django.db import models
 
 
-DATE_PUBLISHED      = 'date published'
 STATIC              = '/static/'
 MODULE_STATIC       = 'module/static/'
 STATIC_IMAGES       = 'module/static/images/'
 STATIC_IMAGES_SMALL = 'module/static/images/small/'
 
 # Create your models here.
-class Divan(models.Model):
+class BaseDivan(models.Model):
     name        = models.CharField(max_length=50)
-    type        = models.CharField(max_length=50, choices = [('1', 'Дивани'),
-                                                             ('2', 'Кутові дивани'),
-                                                             ('3', 'Дивани-ліжка'), 
-                                                             ('4', 'Офісні дивани'),
-                                                             ('5', 'Мякі крісла та пуфіки'), 
-                                                             ('6', 'Готові мякі меблі')])
-    pub_date    = models.DateField(DATE_PUBLISHED)
     image       = models.ImageField(upload_to = STATIC_IMAGES)
+    
+    class Meta:
+        abstract = True
     
     @property
     def url(self):
@@ -32,7 +27,7 @@ class Divan(models.Model):
     def save(self, size=(290, 190)):
         if not self.id and not self.image:
             return
-        super(Divan, self).save()
+        super(BaseDivan, self).save()
         filename = self.image.name
         filename_small = filename.replace(STATIC_IMAGES, STATIC_IMAGES_SMALL)
         _image = Image.open(filename)
@@ -41,3 +36,13 @@ class Divan(models.Model):
     
     def __unicode__(self):
         return self.name
+    
+    
+class SoftMebel(BaseDivan):    
+    type        = models.CharField(max_length=50, choices = [('1', 'Дивани'),
+                                                             ('2', 'Кутові дивани'),
+                                                             ('3', 'Дивани-ліжка'), 
+                                                             ('4', 'Офісні дивани'),
+                                                             ('5', 'Мякі крісла та пуфіки'), 
+                                                             ('6', 'Готові мякі меблі')])
+    
