@@ -46,3 +46,29 @@ class SoftMebel(BaseDivan):
                                                              ('5', 'Мякі крісла та пуфіки'), 
                                                              ('6', 'Готові мякі меблі')])
     
+
+class Citchen(BaseDivan):    
+    type        = models.CharField(max_length=50, choices = [('1', 'Класичні кухні'),
+                                                             ('2', 'Сучасні кухні'),
+                                                             ('3', 'Готові кухні')])
+    
+
+class ShafyKupe(BaseDivan):    
+    type        = models.CharField(max_length=50, choices = [('1', 'Класичні кухні'),
+                                                             ('2', 'Сучасні кухні'),
+                                                             ('3', 'Готові кухні')])
+    
+class Stolu(BaseDivan):
+    type        = models.CharField(max_length=50, choices = [('1', 'Класичні столи'),
+                                                             ('2', 'Сучасні столи'),
+                                                             ('1', 'Класичні стільці'),
+                                                             ('2', 'Сучасні стільці'),
+                                                             ('3', 'Готові столи та стільці')])
+    
+class Spalni(BaseDivan):
+    type        = models.CharField(max_length=50, choices = [('1', 'Класичні спальні'),
+                                                             ('2', 'Сучасні спальні'),
+                                                             ('3', 'Готові спальні')])
+    
+
+

@@ -1,0 +1,7 @@
+.sidebar-menu a{
+	background-image: url("../img/menu/side_menu_5_all.png");
+}
+
+.content .span8 {
+	min-height: 300px;
+}

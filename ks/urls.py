@@ -7,4 +7,5 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^ks/',       include('module.urls')),
     url(r'^admin/',    include(admin.site.urls)),
+    url(r'^',          include('module.urls')),
 )
