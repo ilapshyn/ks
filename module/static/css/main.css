@@ -2,6 +2,10 @@
 				margin-bottom: 5px;
 			}
 			
+			.container {
+				width: 960px;
+			}
+			
 			.cornered{
 				-moz-border-radius: 15px;
 				border-radius: 15px;
@@ -9,6 +13,43 @@
 			
 			.shadowed{
 				box-shadow: 0 0 40px black;
+			}
+			
+			.sidebar-menu a{
+				width: 300px;
+				height: 60px;
+				display: block;
+				margin: 1px;
+				background-image: url("../img/menu/side_menu_1_all.png");
+			}
+			
+			.sidebar-menu a:hover{
+				cursor: pointer;
+				background-position-x: -300px;
+			}
+			
+			.sidebar-button-1{
+				background-position: 0px 0px;
+			}
+			
+			.sidebar-button-2{
+				background-position: 0px -60px;
+			}
+			
+			.sidebar-button-3{
+				background-position: 0px -120px;
+			}
+			
+			.sidebar-button-4{
+				background-position: 0px -180px;
+			}
+			
+			.sidebar-button-5{
+				background-position: 0px -240px;
+			}
+			
+			.sidebar-button-6{
+				background-position: 0px -300px;
 			}
 			
 			.gallery-item{

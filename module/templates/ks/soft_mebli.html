@@ -1,20 +1,32 @@
 ﻿{% extends "ks/base.html" %}
-{% block content%}	
-	<!-- modal-gallery is the modal dialog used for the image gallery -->
-	<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
-		<div class="modal-header">
-			<a class="close" data-dismiss="modal">&times;</a>
-			<h3 class="modal-title"></h3>
+{% block content%}
+	<div class="row">
+		<div class="span4 sidebar-menu">
+			<a class="sidebar-button-1" href="?option=1"></a>
+			<a class="sidebar-button-2" href="?option=2"></a>
+			<a class="sidebar-button-3" href="?option=3"></a>
+			<a class="sidebar-button-4" href="?option=4"></a>
+			<a class="sidebar-button-5" href="?option=5"></a>
+			<a class="sidebar-button-6" href="?option=6"></a>
 		</div>
-		<div class="modal-body"><div class="modal-image"></div></div>
-		<div class="modal-footer">
-			<a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Попередній</a>
-			<a class="btn btn-primary modal-next">Наступний <i class="icon-arrow-right icon-white"></i></a>
+		<div class="span8">
+			<!-- modal-gallery is the modal dialog used for the image gallery -->
+			<div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+				<div class="modal-header">
+					<a class="close" data-dismiss="modal">&times;</a>
+					<h3 class="modal-title"></h3>
+				</div>
+				<div class="modal-body"><div class="modal-image"></div></div>
+				<div class="modal-footer">
+					<a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Попередній</a>
+					<a class="btn btn-primary modal-next">Наступний <i class="icon-arrow-right icon-white"></i></a>
+				</div>
+			</div>
+			<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="div.gallery-item">
+				{% for divan in divans %}
+					<div class="gallery-item" data-href="{{ divan.url }}" title="{{ divan.name }}"><img src="{{ divan.small_url }}" style="width: 288px;"></div>
+				{% endfor %}
+			</div>
 		</div>
-	</div>
-	<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery" data-selector="div.gallery-item">
-		{% for divan in divans %}
-			<div class="gallery-item" data-href="{{ divan.url }}" title="{{ divan.name }}"><img src="{{ divan.small_url }}" style="width: 290px;"></div>
-		{% endfor %}
 	</div>
 {% endblock%}	

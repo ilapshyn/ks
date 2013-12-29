@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from PIL import Image
 from django.db import models
 
@@ -11,7 +12,12 @@ STATIC_IMAGES_SMALL = 'module/static/images/small/'
 # Create your models here.
 class Divan(models.Model):
     name        = models.CharField(max_length=50)
-    type        = models.CharField(max_length=50)
+    type        = models.CharField(max_length=50, choices = [('1', 'Дивани'),
+                                                             ('2', 'Кутові дивани'),
+                                                             ('3', 'Дивани-ліжка'), 
+                                                             ('4', 'Офісні дивани'),
+                                                             ('5', 'Мякі крісла та пуфіки'), 
+                                                             ('6', 'Готові мякі меблі')])
     pub_date    = models.DateField(DATE_PUBLISHED)
     image       = models.ImageField(upload_to = STATIC_IMAGES)
     
