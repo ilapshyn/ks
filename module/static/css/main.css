@@ -192,7 +192,7 @@
 			}
 			
 			.content{
-				min-height: 300px;
+				min-height: 550px;
 				background: #fff6a6;
 				font-family: Serif; 
 				color: #7c0d09; 
@@ -247,7 +247,7 @@
 				width: 318px;
 			}
 			
-			.kontakt-info-button{
+			.kontakty-button{
 				background-position: -584px 0px;
 				width: 366px;
 			}

@@ -1,4 +1,4 @@
-from django.conf.urls import patterns, url
+from django.conf.urls.defaults import patterns, url
 import views
 
 urlpatterns = patterns('',
@@ -10,7 +10,9 @@ urlpatterns = patterns('',
     url(r'^spalni',         views.spalni,       name='spalni'),
     url(r'^shaluzi',        views.shaluzi,      name='shaluzi'),
     url(r'^kartyny',        views.kartyny,      name='kartyny'),
-    url(r'^oplata',        views.oplata,      name='oplata'),
+    url(r'^oplata',         views.oplata,       name='oplata'),
+    url(r'^kontakty',       views.kontakty,     name='kontakty'),
+    url(r'^home',           views.index,        name='home'),
     url(r'^',               views.index,        name='index'),
     url(r'^$',              views.index,        name='root'),
 )
