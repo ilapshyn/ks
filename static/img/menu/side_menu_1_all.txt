@@ -1,7 +1,0 @@
-all picture buttons
-height:	420 px
-width:	900 px
-
-picture button
-height:	60 px
-width:	300 px

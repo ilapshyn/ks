@@ -1,3 +1,0 @@
-copyright
-height:	70 px
-width:	950 px
