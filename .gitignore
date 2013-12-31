@@ -1,1 +1,3 @@
 *.pyc
+*.db
+/module/static/images
