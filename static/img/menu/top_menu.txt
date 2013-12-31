@@ -1,0 +1,11 @@
+top menu
+height:	150 px
+width:	950 px
+
+social button
+height:	40 px
+width:	40 px
+
+right indent for social buttons: 24 px
+
+top and bottom indents for social buttons: 15 px
