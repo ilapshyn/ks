@@ -5,10 +5,15 @@
 	padding-bottom: 0;
 }
 
+.content .row {
+	margin-bottom: 0px;
+}
+
 .content .span8 {
 	background: #fff6a6;
 	box-shadow: 0 0 30px;
 	border-radius: 10px;
+	-moz-border-radius: 10px;
 }
 
 .content .span4 .active {

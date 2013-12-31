@@ -33,7 +33,7 @@ class BaseDivan(models.Model):
         _image = Image.open(filename)
         _image.thumbnail(size, Image.ANTIALIAS)
         _image.save(filename_small)
-    
+        
     def __unicode__(self):
         return self.name
     
