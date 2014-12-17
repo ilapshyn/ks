@@ -1,0 +1,7 @@
+<config>
+	<context-values>
+	</context-values>
+	<macro-library>
+		<entry namespace="bs" path="freemarker/macrolib/macro-all.ftl" project="App" type="file"/>
+	</macro-library>
+</config>
