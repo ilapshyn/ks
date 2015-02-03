@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.ilap.model.Person;
+import com.ilap.model.User;
 
 @Repository
 public class PersonDAO {
@@ -14,12 +14,12 @@ public class PersonDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public void save(Person person) {
+	public void save(User person) {
 		sessionFactory.getCurrentSession().save(person);
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Person> fetchAll() {
+	public List<User> fetchAll() {
 		return sessionFactory.getCurrentSession().createQuery("from Person").list();
 	}
 	

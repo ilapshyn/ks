@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ilap.model.Person;
+import com.ilap.model.User;
 import com.ilap.service.PersonService;
 
 @Controller
@@ -17,14 +17,14 @@ public class UserController {
 	private PersonService personService;
 	
 	@RequestMapping("/user")
-	public Person getUser(){
-		Person person = new Person("Igor", "Lapshyn", (long) 24);
+	public User getUser(){
+		User person = new User("Igor", "Lapshyn", (long) 24);
 		personService.save(person);
 		return person;
 	}
 	
 	@RequestMapping("/users")
-	public @ResponseBody List<Person> getUsers(){
+	public @ResponseBody List<User> getUsers(){
 		return personService.fetchAll();
 	}
 	

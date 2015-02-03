@@ -1,0 +1,20 @@
+.slider-wrapper {
+	float: left;
+	overflow: hidden;
+	margin-left: 45px;
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0 0 10px black;
+	margin-right: 15px;
+}
+
+.slider-toggle {
+	width: 200px;
+	height: 400px;
+	color: white;
+}
+
+.content .topic {
+	width: 95%;
+}
+
+.sidebar-search {}

@@ -6,8 +6,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.Table;
+
 @Entity
-public class Person {
+public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,14 +24,14 @@ public class Person {
 	@Column
 	private Long age;
 
-	public Person(String firstName, String lastName, Long age) {
+	public User(String firstName, String lastName, Long age) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
 	}
 	
-	public Person() {}
+	public User() {}
 	
 	public String getFirstName() {
 		return firstName;
