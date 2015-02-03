@@ -6,22 +6,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ilap.dao.PersonDAO;
+import com.ilap.dao.UserDAO;
 import com.ilap.model.User;
 
 @Service
 @Transactional
-public class PersonService {
+public class UserService {
 
 	@Autowired
-	private PersonDAO personDao;
+	private UserDAO userDao;
 	
-	public void save(User person) {
-		personDao.save(person);
+	public void save(User user) {
+		userDao.save(user);
 	}
 
 	public List<User> fetchAll() {
-		return personDao.fetchAll();
+		List<User> users = userDao.fetchAll();
+		for(User user : users) {
+			System.out.println(user.getUserRole().size());
+		}
+		return users;
 	}
 	
 }

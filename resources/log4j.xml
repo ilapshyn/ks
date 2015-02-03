@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.softserve">
+	<logger name="com.ilap">
 		<level value="info" />
 	</logger>
 	

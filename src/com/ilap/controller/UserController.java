@@ -8,19 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.ilap.model.User;
-import com.ilap.service.PersonService;
+import com.ilap.service.UserService;
 
 @Controller
 public class UserController {
 	
 	@Autowired
-	private PersonService personService;
+	private UserService personService;
 	
 	@RequestMapping("/user")
 	public User getUser(){
-		User person = new User("Igor", "Lapshyn", (long) 24);
-		personService.save(person);
-		return person;
+		personService.save(null);
+		return null;
 	}
 	
 	@RequestMapping("/users")
