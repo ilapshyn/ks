@@ -1,4 +1,4 @@
-package com.softserve.controller;
+package com.ilap.controller;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.softserve.model.Person;
-import com.softserve.service.PersonService;
+import com.ilap.model.Person;
+import com.ilap.service.PersonService;
 
 @Controller
 public class UserController {

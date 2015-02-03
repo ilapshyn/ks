@@ -1,4 +1,4 @@
-package com.softserve.model;
+package com.ilap.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

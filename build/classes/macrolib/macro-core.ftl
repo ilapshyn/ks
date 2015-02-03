@@ -23,7 +23,6 @@
 			<!-------------- CSS section ------------->
 			<!---------------------------------------->
 			<link href="${resourceFolder}/css/bootstrap.css" 				rel="stylesheet">
-			<link href="${resourceFolder}/css/bootstrap-responsive.css" 	rel="stylesheet">
 			<#list requiredStyles as style>
 				<link href="${resourceFolder}/css/${style}.css" rel="stylesheet">
 			</#list>
@@ -45,7 +44,7 @@
 			<!---------------------------------------->
 			<!----- JavaScript libraries section ----->
 			<!---------------------------------------->
-			<script src="${resourceFolder}/js/jquery-1.9.1.js"></script>
+			<script src="${resourceFolder}/js/jquery.js"></script>
 			<script src="${resourceFolder}/js/bootstrap.js"></script>
 			<#list scriptLibraries as lib>
 				<script src="${resourceFolder}/js/${lib}.js"></script>

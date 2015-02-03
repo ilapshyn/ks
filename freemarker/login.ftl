@@ -15,7 +15,6 @@
 			</@section>
 		</@row>
 	</@container>
--->
 
 	<div class="container">
 	    <div class="row">
@@ -40,4 +39,26 @@
 	        </div>
 	    </div>
 	</div>
+-->
+
+
+<div class="container">
+	<div class="content">
+      <div class="row">
+        <div class="login-form">
+          <h2>Login</h2>
+          <form action="/j_spring_security_check" method="post">
+              <div class="form-group">
+                <input type="text" name="j_username" class="form-control" required autofocus placeholder="Username">
+              </div>
+              <div class="form-group">
+                <input type="password" name="j_password" class="form-control" placeholder="Password" required>
+              </div>
+              <button class="btn btn-primary" type="submit">Sign in</button>
+          </form>
+        </div>
+      </div>
+   </div>
+  </div> <!-- /container -->
+
 </@document>

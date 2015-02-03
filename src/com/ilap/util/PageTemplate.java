@@ -1,14 +1,9 @@
-package com.softserve.util;
+package com.ilap.util;
 
 public interface PageTemplate {
 
 	String LOGIN = "login";
+	String ADMIN = "admin";
 	String MAIN = "index";
-	String ABOUT = "about";
-	String DELIVERY = "delivery";
-	String PAYMENT = "payment";
-	String NEWS = "news";
-	String ACTIONS = "actions";
-	String CONTACTS = "contacts";
 	
 }

@@ -1,4 +1,4 @@
-package com.softserve.util;
+package com.ilap.util;
 
 public final class ModelAndView extends org.springframework.web.servlet.ModelAndView {
 	public ModelAndView(Page page) {

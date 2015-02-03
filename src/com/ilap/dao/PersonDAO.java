@@ -1,4 +1,4 @@
-package com.softserve.dao;
+package com.ilap.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.softserve.model.Person;
+import com.ilap.model.Person;
 
 @Repository
 public class PersonDAO {

@@ -1,4 +1,4 @@
-package com.softserve.service;
+package com.ilap.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.softserve.dao.PersonDAO;
-import com.softserve.model.Person;
+import com.ilap.dao.PersonDAO;
+import com.ilap.model.Person;
 
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.softserve.util;
+package com.ilap.util;
 
 public class ModelMapKeys {
 
